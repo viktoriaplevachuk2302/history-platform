@@ -1,0 +1,138 @@
+.event-card {
+  background-color: #f8f4e9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.event-image-wrapper {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  position: relative;
+  overflow: hidden;
+  background-color: #f0e6d6;
+}
+
+.image-placeholder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #f0e6d6 25%, #e8dfd1 50%, #f0e6d6 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.event-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.event-image.loaded {
+  opacity: 1;
+}
+
+.event-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.event-title {
+  margin: 0 0 0.5rem 0;
+  color: #5a4a42;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.event-years {
+  color: #8b7355;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.event-short-description {
+  color: #5a4a42;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  
+  /* Додаємо стандартні властивості для сумісності */
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-line-clamp: 3;
+  display: box;
+  line-clamp: 3;
+  box-orient: vertical;
+}
+
+.event-details-btn {
+  display: inline-block;
+  padding: 0.7rem 1.3rem;
+  background-color: #8b7355;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: auto;
+  align-self: flex-start;
+  transition: all 0.3s;
+  font-weight: 500;
+  text-align: center;
+}
+
+.event-details-btn:hover {
+  background-color: #6b5a46;
+  transform: translateY(-2px);
+}
+
+/* Відмітки періодів */
+.event-card.ancient {
+  border-top: 4px solid #5a4a42;
+}
+
+.event-card.middle {
+  border-top: 4px solid #8b7355;
+}
+
+.event-card.new {
+  border-top: 4px solid #b3a08e;
+}
+
+.event-card.modern {
+  border-top: 4px solid #d4c9b8;
+}
+
+@media (max-width: 480px) {
+  .event-content {
+    padding: 1rem;
+  }
+  
+  .event-title {
+    font-size: 1.1rem;
+  }
+}

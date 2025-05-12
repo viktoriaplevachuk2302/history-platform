@@ -1,0 +1,25 @@
+.comments-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.comments-list {
+  margin-bottom: 2rem;
+}
+
+.comment {
+  background-color: #e8e0d5;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.comment h3 {
+  margin-top: 0;
+  color: #5a4a42;
+}
+
+.comment small {
+  color: #777;
+}

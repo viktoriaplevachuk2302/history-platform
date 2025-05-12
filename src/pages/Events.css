@@ -1,0 +1,80 @@
+.events-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .events-page h1 {
+    text-align: center;
+    color: #5a4a42;
+    margin-bottom: 2rem;
+  }
+  
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .period-filter {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .period-filter button {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #8b7355;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+    color: #5a4a42;
+  }
+  
+  .period-filter button:hover {
+    background-color: rgba(139, 115, 85, 0.1);
+  }
+  
+  .period-filter button.active {
+    background-color: #8b7355;
+    color: white;
+  }
+  
+  .back-to-home {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .back-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #8b7355;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #6b5a46;
+  }
+  
+  @media (max-width: 768px) {
+    .events-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .period-filter {
+      gap: 0.5rem;
+    }
+    
+    .period-filter button {
+      padding: 0.5rem 0.8rem;
+      font-size: 0.9rem;
+    }
+  }

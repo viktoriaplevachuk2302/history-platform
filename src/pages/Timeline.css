@@ -1,0 +1,17 @@
+.timeline-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.timeline-container {
+  margin-top: 2rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.timeline-scroll {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
